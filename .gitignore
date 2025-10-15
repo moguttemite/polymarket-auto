@@ -47,3 +47,6 @@ wheels/
 
 # 参考文件 - py-clob-client（仅作参考，不进行版本控制）
 py_package/py-clob-client/
+node_modules/
+package-lock.json
+package.json
