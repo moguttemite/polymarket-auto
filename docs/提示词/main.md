@@ -1,0 +1,1 @@
+py_package/py-clob-client/examples 文件夹下是Polymarket官方包所提供的实例，在阅览相关资料和py-clob-client包实现的基础上，给这些实例加上详尽的注释。

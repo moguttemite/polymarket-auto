@@ -7,13 +7,16 @@
 自动化测试统一置于 `test/`，并与运行时代码同名映射，例如 `src/services/order_flow.py` 对应 `test/test_order_flow.py`。
 
 ## 开发本系统主要使用的的py包，py-clob-client：
-https://github.com/Polymarket/py-clob-client
+py-clob-client包的源码参考资料在 "py_package/py-clob-client" 文件夹下
+py-clob-client的安装之类为 "pip install py-clob-client"
 
 ## 构建、测试与开发命令
-使用 Python 3.14 anaconda虚拟环境：`conda activate polymarket`。安装依赖：`pip install py_clob_client pytest`。配置好凭证后执行 `python main.py` 可验证下单流程。运行全部测试请在仓库根目录执行 `pytest`，调试时可加 `-q` 获取精简输出。
+使用 Python 3.14 anaconda虚拟环境：`conda activate polymarket`。
 
 ## 代码风格与命名约定
 遵循 PEP 8，保持 4 空格缩进，函数与变量使用蛇形命名（`snake_case`），测试文件命名为 `test_*.py`。尽量补充类型标注以提升可读性，并对调用外部服务的关键函数写简短文档字符串。提交前运行 `black .`（88 字符行宽）与 `isort` 整理格式，同时确保注释聚焦在业务背景或外部接口假设。
+
+## 文件实现
 
 ## 测试指引
 统一使用 `pytest` 编写用例，共享准备逻辑可放在 `test/conftest.py`。建议每个运行模块配套一个测试模块，并按行为命名测试函数，如 `test_create_order_handles_invalid_price()`。对 Polymarket 的网络调用应通过 mock 隔离，保证离线可执行；重要路径需覆盖至少一个异常或失败场景，重点关注签名方式选择和凭证加载逻辑。
