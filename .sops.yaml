@@ -1,0 +1,13 @@
+# .sops.yaml —— 让 sops 用你的 age 公钥加密
+creation_rules:
+  # 规则1：任何 env 文件（.env / .env.* / secrets.env）整文件加密
+  - path_regex: '(.env|\.env\..*|secrets\.env)$'
+    age:
+      - age1ghpelagq0hav69hy4z4z4yzafa4ksf3fndtr5d98338n6dap24qs5kny6w
+    encrypted_regex: '^(.*)$'
+
+  # 规则2：secrets/ 目录下的所有文件（若你把敏感配置放这里）
+  - path_regex: '(^|/)secrets/.*'
+    age:
+      - age1ghpelagq0hav69hy4z4z4yzafa4ksf3fndtr5d98338n6dap24qs5kny6w
+    encrypted_regex: '^(.*)$'
