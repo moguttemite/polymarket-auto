@@ -1,0 +1,4 @@
+2025-10-16 18:06:16,417 [INFO] 日志初始化完成，输出文件：/home/user/polymarket-auto/src/logs/select_event_20251016_180616.log
+2025-10-16 18:06:16,418 [INFO] 开始事件筛选：limit=1000，标签白名单=crypto, cryptocurrencies, stocks, equities, indices, index, sports, esports，历史排除事件=0
+2025-10-16 18:10:41,215 [INFO] 共获取到 457 个事件，按 100 条/窗口开始筛选。
+2025-10-16 18:10:41,215 [INFO] 开始处理窗口 1/5（事件 1-100）

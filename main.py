@@ -25,11 +25,11 @@ POLYMARKET_PROXY_ADDRESS: str = os.getenv("POLYMARKET_PROXY_ADDRESS", "")  # 从
 
 # 1. 使用与 Email/Magic 账户关联的 Polymarket 代理进行客户端初始化
 # 如果您使用电子邮件登录，请使用此示例
-client = ClobClient(host, key=key, chain_id=chain_id, signature_type=1, funder=POLYMARKET_PROXY_ADDRESS)
+# client = ClobClient(host, key=key, chain_id=chain_id, signature_type=1, funder=POLYMARKET_PROXY_ADDRESS)
 
 # 2. 使用与浏览器钱包（如 Metamask、Coinbase Wallet 等）关联的 Polymarket 代理进行客户端初始化
 # 如果您使用浏览器钱包登录，请使用此示例
-# client = ClobClient(host, key=key, chain_id=chain_id, signature_type=2, funder=POLYMARKET_PROXY_ADDRESS)
+client = ClobClient(host, key=key, chain_id=chain_id, signature_type=2, funder=POLYMARKET_PROXY_ADDRESS)
 
 # 3. 直接从 EOA（外部拥有账户）进行交易的客户端初始化
 # 如果您直接使用钱包地址进行交易，请使用此示例
